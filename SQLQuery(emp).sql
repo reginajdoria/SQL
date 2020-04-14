@@ -220,6 +220,6 @@ select sal as salary, comm as commission
 		) x
 where salary < 5000
 
-select concat (ename, 'WORKS AS A'	job) as msg
+select concat (ename, 'WORKS AS A' job) as msg
 	from emp
 	where deptno=10
