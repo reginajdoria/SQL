@@ -220,6 +220,29 @@ select sal as salary, comm as commission
 		) x
 where salary < 5000
 
-select concat (ename, 'WORKS AS A' job) as msg
+select concat (ename, 'WORKS AS A ', job) as msg
 	from emp
 	where deptno=10
+
+select ename, sal, 
+	case when sal >= 2000 then 'UNDERPAID'
+		when sal <= 4000 then 'OVERPAID'
+	end as status
+from emp	
+
+select top 5 *
+	from emp
+	
+select ename, job	
+	from emp
+	
+select top 5 ename, job	
+	from emp
+order by newid()
+
+select *
+	from emp
+where comm is null 
+
+
+
